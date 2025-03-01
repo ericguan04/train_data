@@ -7,6 +7,10 @@ def top_station_destinations(ridership_df, top_n=5):
     top_destinations = ridership_df.groupby("Destination Station Complex Name").size().reset_index(name='Count').sort_values('Count', ascending=False).head(top_n)
     return top_destinations
 
+def bottom_station_destinations(ridership_df, bottom_n=5):
+    top_destinations = ridership_df.groupby("Destination Station Complex Name").size().reset_index(name='Count').sort_values('Count', ascending=True).head(bottom_n)
+    return top_destinations
+
 def origin_destination_visualizer(ridership_df, station_df, top_n = 5):
 
     # Get ridership data for the origin station and group by destination
