@@ -175,56 +175,319 @@ def create_sankey_diagram(sankey_data):
         {'source': 7, 'target': 13, 'value': sankey_data['no_burden_response'], 'label': f"{sankey_data['no_burden_response']} No Response"}
     ]
     
-    # Create the Sankey diagram
+    # Create the Sankey diagram with enhanced UI
     fig = go.Figure(data=[go.Sankey(
         node=dict(
-            pad=15,
-            thickness=20,
-            line=dict(color="black", width=0.5),
+            pad=20,  # Increased padding for better spacing
+            thickness=25,  # Increased thickness for better visibility
+            line=dict(color="rgba(50, 50, 50, 0.5)", width=0.8),  # Improved border
             label=[node['label'] for node in nodes],
-            color=["rgba(31, 119, 180, 0.8)",  # Total Responses
-                   "rgba(255, 127, 14, 0.8)",  # Aware
-                   "rgba(44, 160, 44, 0.8)",  # Unaware
-                   "rgba(214, 39, 40, 0.8)",  # No Awareness Response
-                   "rgba(148, 103, 189, 0.8)",  # Applied
-                   "rgba(140, 86, 75, 0.8)",  # Did Not Apply
-                   "rgba(227, 119, 194, 0.8)",  # No Application Response
-                   "rgba(127, 127, 127, 0.8)",  # Accepted
-                   "rgba(188, 189, 34, 0.8)",  # Rejected
-                   "rgba(23, 190, 207, 0.8)",  # Pending
-                   "rgba(31, 119, 180, 0.8)",  # No Acceptance Response
-                   "rgba(255, 127, 14, 0.8)",  # Reduced Financial Burden
-                   "rgba(44, 160, 44, 0.8)",  # No Reduction in Financial Burden
-                   "rgba(214, 39, 40, 0.8)"]  # No Financial Burden Response
+            # Enhanced color palette with better contrast
+            color=["rgba(31, 119, 180, 0.9)",  # Total Responses - deeper blue
+                   "rgba(255, 127, 14, 0.9)",  # Aware - vibrant orange
+                   "rgba(44, 160, 44, 0.9)",  # Unaware - rich green
+                   "rgba(214, 39, 40, 0.9)",  # No Awareness Response - bright red
+                   "rgba(148, 103, 189, 0.9)",  # Applied - deep purple
+                   "rgba(140, 86, 75, 0.9)",  # Did Not Apply - brown
+                   "rgba(227, 119, 194, 0.9)",  # No Application Response - pink
+                   "rgba(127, 127, 127, 0.9)",  # Accepted - gray
+                   "rgba(188, 189, 34, 0.9)",  # Rejected - yellow-green
+                   "rgba(23, 190, 207, 0.9)",  # Pending - cyan
+                   "rgba(31, 119, 180, 0.9)",  # No Acceptance Response - blue
+                   "rgba(255, 127, 14, 0.9)",  # Reduced Financial Burden - orange
+                   "rgba(44, 160, 44, 0.9)",  # No Reduction in Financial Burden - green
+                   "rgba(214, 39, 40, 0.9)"],  # No Financial Burden Response - red
+            # Add hover text for better interactivity
+            hoverinfo="all",
+            hoverlabel=dict(bgcolor="white", font_size=14, font_family="Arial")
         ),
         link=dict(
             source=[link['source'] for link in links],
             target=[link['target'] for link in links],
             value=[link['value'] for link in links],
             label=[link['label'] for link in links],
-            color=["rgba(31, 119, 180, 0.4)",  # Total to Aware
-                   "rgba(255, 127, 14, 0.4)",  # Total to Unaware
-                   "rgba(44, 160, 44, 0.4)",  # Total to No Awareness Response
-                   "rgba(214, 39, 40, 0.4)",  # Aware to Applied
-                   "rgba(148, 103, 189, 0.4)",  # Aware to Did Not Apply
-                   "rgba(140, 86, 75, 0.4)",  # Aware to No Application Response
-                   "rgba(227, 119, 194, 0.4)",  # Applied to Accepted
-                   "rgba(127, 127, 127, 0.4)",  # Applied to Rejected
-                   "rgba(188, 189, 34, 0.4)",  # Applied to Pending
-                   "rgba(23, 190, 207, 0.4)",  # Applied to No Acceptance Response
-                   "rgba(31, 119, 180, 0.4)",  # Accepted to Reduced
-                   "rgba(255, 127, 14, 0.4)",  # Accepted to Not Reduced
-                   "rgba(44, 160, 44, 0.4)"]  # Accepted to No Burden Response
-        )
+            # Enhanced link colors with better opacity for visibility
+            color=["rgba(31, 119, 180, 0.6)",  # Total to Aware
+                   "rgba(255, 127, 14, 0.6)",  # Total to Unaware
+                   "rgba(44, 160, 44, 0.6)",  # Total to No Awareness Response
+                   "rgba(214, 39, 40, 0.6)",  # Aware to Applied
+                   "rgba(148, 103, 189, 0.6)",  # Aware to Did Not Apply
+                   "rgba(140, 86, 75, 0.6)",  # Aware to No Application Response
+                   "rgba(227, 119, 194, 0.6)",  # Applied to Accepted
+                   "rgba(127, 127, 127, 0.6)",  # Applied to Rejected
+                   "rgba(188, 189, 34, 0.6)",  # Applied to Pending
+                   "rgba(23, 190, 207, 0.6)",  # Applied to No Acceptance Response
+                   "rgba(31, 119, 180, 0.6)",  # Accepted to Reduced
+                   "rgba(255, 127, 14, 0.6)",  # Accepted to Not Reduced
+                   "rgba(44, 160, 44, 0.6)"],  # Accepted to No Burden Response
+            # Add hover information for links
+            hoverinfo="all",
+            hoverlabel=dict(bgcolor="white", font_size=14, font_family="Arial")
+        ),
+        # Add arrangement for better flow visualization
+        arrangement="snap"
     )])
     
-    # Update the layout
+    # Update the layout with enhanced UI and animations
     fig.update_layout(
-        title_text="Fair Fares NYC Program Application Flow",
-        font_size=12,
-        width=1000,
-        height=800
+        title=dict(
+            text="Fair Fares NYC Program Application Flow",
+            font=dict(size=24, family="Arial, sans-serif", color="#333333"),
+            x=0.5,  # Center the title
+            y=0.95  # Position from the top
+        ),
+        font=dict(family="Arial, sans-serif", size=14, color="#333333"),
+        width=1400,  # Width to accommodate both diagram and legend panel
+        height=900,  # Increased height for better visibility
+        paper_bgcolor="rgba(248, 248, 250, 1)",  # Light background color
+        plot_bgcolor="rgba(248, 248, 250, 1)",  # Light background color
+        margin=dict(l=200, r=200, t=80, b=25),  # Balanced margins for centering
+        hovermode="closest",  # Improved hover behavior
+        # Add animation settings with slower timing and reset functionality
+        updatemenus=[
+            dict(
+                type="buttons",
+                showactive=False,
+                buttons=[
+                    dict(
+                        label="Play Flow Animation",
+                        method="animate",
+                        args=[
+                            None,
+                            dict(
+                                frame=dict(duration=2500, redraw=True),  # Increased duration for slower animation
+                                fromcurrent=True,
+                                transition=dict(duration=1200, easing="cubic-in-out"),  # Increased transition time
+                                mode="immediate"
+                            )
+                        ]
+                    ),
+                    dict(
+                        label="Reset View",
+                        method="animate",
+                        args=[
+                            ["Reset"],  # Target the reset frame by name
+                            dict(
+                                frame=dict(duration=800, redraw=True),
+                                transition=dict(duration=500, easing="cubic-in-out"),
+                                mode="immediate"
+                            )
+                        ]
+                    )
+                ],
+                direction="left",
+                pad=dict(r=10, t=10),
+                x=0.1,
+                y=0.1,
+                xanchor="right",
+                yanchor="top"
+            )
+        ],
+        # Add hover animations
+        hoverlabel=dict(
+            bgcolor="white",
+            font_size=14,
+            font_family="Arial, sans-serif",
+            bordercolor="rgba(0, 0, 0, 0.3)",
+            namelength=-1
+        ),
+        # Add transitions for smoother animations
+        transition=dict(
+            duration=1000,
+            easing="cubic-in-out"
+        )
     )
+    
+    # Add animation frames for sequential flow visualization
+    frames = []
+    
+    # Define descriptions for each node to be shown in the legend panel
+    node_descriptions = [
+        "Total survey responses collected from CUNY students",  # 0
+        "Students who knew about the Fair Fares NYC program",  # 1
+        "Students who had never heard of Fair Fares NYC",  # 2
+        "Students who did not answer the awareness question",  # 3
+        "Students who submitted an application for Fair Fares",  # 4
+        "Students who were aware but chose not to apply",  # 5
+        "Students who were aware but didn't indicate if they applied",  # 6
+        "Students whose Fair Fares applications were accepted",  # 7
+        "Students whose Fair Fares applications were rejected",  # 8
+        "Students whose Fair Fares applications are still pending",  # 9
+        "Students who applied but didn't indicate acceptance status",  # 10
+        "Students who reported reduced financial burden after acceptance",  # 11
+        "Students who reported no reduction in financial burden",  # 12
+        "Students who were accepted but didn't report on financial impact"  # 13
+    ]
+    
+    # Create frames for sequential node highlighting with legend panel
+    for i in range(len(nodes)):
+        # Create the legend panel annotation for the current highlighted node
+        legend_annotations = [
+            # Title for the legend panel
+            dict(
+                x=0.01,
+                y=0.99,
+                xref="paper",
+                yref="paper",
+                text="<b>Fair Fares NYC Program Flow</b>",
+                showarrow=False,
+                font=dict(size=18, color="#333333"),
+                align="left",
+                bgcolor="rgba(248, 248, 250, 0.95)",  # Semi-transparent background
+                bordercolor="rgba(0, 0, 0, 0.2)",  # Light border
+                borderwidth=2,
+                borderpad=6  # Padding inside the box
+            )
+        ]
+        
+        # Add descriptions for each stage with highlighting for the current stage
+        for j, desc in enumerate(node_descriptions):
+            legend_annotations.append(
+                dict(
+                    x=0.01,
+                    y=0.95 - (j * 0.035),  # Reduced spacing between items to fit better in the margin
+                    xref="paper",
+                    yref="paper",
+                    text=f"<b style='color: {'red' if j == i else 'black'};'>{nodes[j]['label']}:</b> {desc}",
+                    showarrow=False,
+                    font=dict(size=11, color="#333333" if j != i else "#FF0000"),  # Slightly smaller font
+                    align="left",
+                    bgcolor="rgba(248, 248, 250, 0.9)",  # Semi-transparent background for better readability
+                    bordercolor="rgba(0, 0, 0, 0.1)",  # Light border
+                    borderwidth=1,
+                    borderpad=4  # Padding inside the box
+                )
+            )
+        
+        # Define a list of vibrant colors for highlighting nodes during animation
+        highlight_colors = [
+            "rgba(255, 0, 0, 0.9)",        # Bright Red
+            "rgba(0, 255, 0, 0.9)",        # Bright Green
+            "rgba(0, 0, 255, 0.9)",        # Bright Blue
+            "rgba(255, 255, 0, 0.9)",      # Yellow
+            "rgba(255, 0, 255, 0.9)",      # Magenta
+            "rgba(0, 255, 255, 0.9)",      # Cyan
+            "rgba(255, 165, 0, 0.9)",      # Orange
+            "rgba(128, 0, 128, 0.9)",      # Purple
+            "rgba(0, 128, 0, 0.9)",        # Dark Green
+            "rgba(220, 20, 60, 0.9)",      # Crimson
+            "rgba(70, 130, 180, 0.9)",     # Steel Blue
+            "rgba(210, 105, 30, 0.9)",     # Chocolate
+            "rgba(154, 205, 50, 0.9)",     # Yellow Green
+            "rgba(25, 25, 112, 0.9)"       # Midnight Blue
+        ]
+        
+        frame_data = go.Frame(
+            data=[go.Sankey(
+                node=dict(
+                    pad=20,
+                    thickness=25,
+                    line=dict(color="rgba(50, 50, 50, 0.5)", width=0.8),
+                    label=[node['label'] for node in nodes],
+                    # Highlight current node with a unique color in animation sequence
+                    color=[highlight_colors[i % len(highlight_colors)] if j == i else 
+                           "rgba(31, 119, 180, 0.9)" if j == 0 else
+                           "rgba(255, 127, 14, 0.9)" if j == 1 else
+                           "rgba(44, 160, 44, 0.9)" if j == 2 else
+                           "rgba(214, 39, 40, 0.9)" if j == 3 else
+                           "rgba(148, 103, 189, 0.9)" if j == 4 else
+                           "rgba(140, 86, 75, 0.9)" if j == 5 else
+                           "rgba(227, 119, 194, 0.9)" if j == 6 else
+                           "rgba(127, 127, 127, 0.9)" if j == 7 else
+                           "rgba(188, 189, 34, 0.9)" if j == 8 else
+                           "rgba(23, 190, 207, 0.9)" if j == 9 else
+                           "rgba(31, 119, 180, 0.9)" if j == 10 else
+                           "rgba(255, 127, 14, 0.9)" if j == 11 else
+                           "rgba(44, 160, 44, 0.9)" if j == 12 else
+                           "rgba(214, 39, 40, 0.9)" for j in range(len(nodes))],
+                    hoverinfo="all",
+                    hoverlabel=dict(
+                        bgcolor="white", 
+                        font_size=14, 
+                        font_family="Arial",
+                        bordercolor="rgba(0, 0, 0, 0.3)",
+                        namelength=-1
+                    )
+                ),
+                link=dict(
+                    source=[link['source'] for link in links],
+                    target=[link['target'] for link in links],
+                    value=[link['value'] for link in links],
+                    label=[link.get('label', '') for link in links],
+                    # Highlight links connected to current node with the same color as the highlighted node
+                    color=[(highlight_colors[i % len(highlight_colors)].replace('0.9', '0.5')) if link['source'] == i or link['target'] == i else
+                           "rgba(0, 0, 0, 0.2)" for link in links],
+                    hoverinfo="all"
+                )
+            )],
+            name=f"Frame {i}",
+            layout=dict(annotations=legend_annotations)
+        )
+        frames.append(frame_data)
+    
+    # Create a reset frame that returns to the original colors
+    reset_frame = go.Frame(
+        data=[go.Sankey(
+            node=dict(
+                pad=20,
+                thickness=25,
+                line=dict(color="rgba(50, 50, 50, 0.5)", width=0.8),
+                label=[node['label'] for node in nodes],
+                # Original colors without highlighting
+                color=["rgba(31, 119, 180, 0.9)",  # Total Responses - deeper blue
+                       "rgba(255, 127, 14, 0.9)",  # Aware - vibrant orange
+                       "rgba(44, 160, 44, 0.9)",  # Unaware - rich green
+                       "rgba(214, 39, 40, 0.9)",  # No Awareness Response - bright red
+                       "rgba(148, 103, 189, 0.9)",  # Applied - deep purple
+                       "rgba(140, 86, 75, 0.9)",  # Did Not Apply - brown
+                       "rgba(227, 119, 194, 0.9)",  # No Application Response - pink
+                       "rgba(127, 127, 127, 0.9)",  # Accepted - gray
+                       "rgba(188, 189, 34, 0.9)",  # Rejected - yellow-green
+                       "rgba(23, 190, 207, 0.9)",  # Pending - cyan
+                       "rgba(31, 119, 180, 0.9)",  # No Acceptance Response - blue
+                       "rgba(255, 127, 14, 0.9)",  # Reduced Financial Burden - orange
+                       "rgba(44, 160, 44, 0.9)",  # No Reduction in Financial Burden - green
+                       "rgba(214, 39, 40, 0.9)"],  # No Financial Burden Response - red
+                hoverinfo="all",
+                hoverlabel=dict(
+                    bgcolor="white", 
+                    font_size=14, 
+                    font_family="Arial",
+                    bordercolor="rgba(0, 0, 0, 0.3)",
+                    namelength=-1
+                )
+            ),
+            link=dict(
+                source=[link['source'] for link in links],
+                target=[link['target'] for link in links],
+                value=[link['value'] for link in links],
+                label=[link.get('label', '') for link in links],
+                # Original link colors
+                color=["rgba(31, 119, 180, 0.6)",  # Total to Aware
+                       "rgba(255, 127, 14, 0.6)",  # Total to Unaware
+                       "rgba(44, 160, 44, 0.6)",  # Total to No Awareness Response
+                       "rgba(214, 39, 40, 0.6)",  # Aware to Applied
+                       "rgba(148, 103, 189, 0.6)",  # Aware to Did Not Apply
+                       "rgba(140, 86, 75, 0.6)",  # Aware to No Application Response
+                       "rgba(227, 119, 194, 0.6)",  # Applied to Accepted
+                       "rgba(127, 127, 127, 0.6)",  # Applied to Rejected
+                       "rgba(188, 189, 34, 0.6)",  # Applied to Pending
+                       "rgba(23, 190, 207, 0.6)",  # Applied to No Acceptance Response
+                       "rgba(31, 119, 180, 0.6)",  # Accepted to Reduced
+                       "rgba(255, 127, 14, 0.6)",  # Accepted to Not Reduced
+                       "rgba(44, 160, 44, 0.6)"],  # Accepted to No Burden Response
+                hoverinfo="all"
+            )
+        )],
+        name="Reset",
+        layout=dict(annotations=[])
+    )
+    
+    # Add the reset frame to the end of the frames list
+    frames.append(reset_frame)
+    
+    # Add frames to the figure
+    fig.frames = frames
     
     return fig
 
