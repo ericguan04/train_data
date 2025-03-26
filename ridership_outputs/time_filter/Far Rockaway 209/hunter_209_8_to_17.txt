@@ -1,0 +1,493 @@
+Year: 2021
+Month: 1
+Monday: 18.044399999999996
+Tuesday: 7.283200000000001
+Wednesday: 10.884
+Thursday: 9.9468
+Friday: 9.0152
+Saturday: 2.14
+Sunday: 1.0768
+All Ridership in Month: 58.3904
+
+Month: 2
+Monday: 18.423599999999997
+Tuesday: 17.614
+Wednesday: 20.0552
+Thursday: 16.451600000000003
+Friday: 13.834
+Saturday: 4.0292
+Sunday: 1.3752
+All Ridership in Month: 91.78280000000001
+
+Month: 3
+Monday: 18.843999999999998
+Tuesday: 14.7208
+Wednesday: 13.650400000000001
+Thursday: 8.784
+Friday: 8.558
+Saturday: 5.4812
+Sunday: 2.6500000000000004
+All Ridership in Month: 72.6884
+
+Month: 4
+Monday: 23.165200000000002
+Tuesday: 16.1756
+Wednesday: 18.508
+Thursday: 25.050400000000003
+Friday: 9.116
+Saturday: 8.2
+Sunday: 2.6112
+All Ridership in Month: 102.8264
+
+Month: 5
+Monday: 23.000799999999998
+Tuesday: 15.8836
+Wednesday: 23.349599999999995
+Thursday: 17.2524
+Friday: 16.124
+Saturday: 2.0744
+Sunday: 2.052
+All Ridership in Month: 99.7368
+
+Month: 6
+Monday: 22.3352
+Tuesday: 20.0696
+Wednesday: 18.2768
+Thursday: 15.8448
+Friday: 14.454
+Saturday: 3.75
+Sunday: 4.0152
+All Ridership in Month: 98.7456
+
+Month: 7
+Monday: 24.070800000000002
+Tuesday: 24.863599999999998
+Wednesday: 23.584
+Thursday: 24.992
+Friday: 18.382399999999997
+Saturday: 8.6784
+Sunday: 1.4752
+All Ridership in Month: 126.04639999999999
+
+Month: 8
+Monday: 24.9088
+Tuesday: 15.208
+Wednesday: 24.260399999999997
+Thursday: 23.952799999999996
+Friday: 13.7584
+Saturday: 6.602
+Sunday: 3.1944
+All Ridership in Month: 111.88479999999998
+
+Month: 9
+Monday: 21.51
+Tuesday: 24.326
+Wednesday: 26.548000000000002
+Thursday: 22.720000000000002
+Friday: 13.562
+Saturday: 1.318
+Sunday: 3.8212
+All Ridership in Month: 113.8052
+
+Month: 10
+Monday: 20.3376
+Tuesday: 15.800400000000002
+Wednesday: 28.171599999999998
+Thursday: 27.0044
+Friday: 14.747200000000001
+Saturday: 2.1639999999999997
+Sunday: 1.0464
+All Ridership in Month: 109.2716
+
+Month: 11
+Monday: 18.1368
+Tuesday: 15.462399999999999
+Wednesday: 13.6156
+Thursday: 18.266
+Friday: 12.0748
+Saturday: 5.135999999999999
+Sunday: 0.0
+All Ridership in Month: 82.69159999999998
+
+Month: 12
+Monday: 18.304800000000004
+Tuesday: 14.598400000000002
+Wednesday: 10.6752
+Thursday: 15.476
+Friday: 2.9664
+Saturday: 2.5728
+Sunday: 1.2912
+All Ridership in Month: 65.8848
+
+All Ridership in Year: 1133.7548
+
+Year: 2022
+Month: 1
+Monday: 13.004000000000001
+Tuesday: 7.7112
+Wednesday: 16.4168
+Thursday: 11.276
+Friday: 14.770399999999999
+Saturday: 2.2704000000000004
+Sunday: 0.0
+All Ridership in Month: 65.44879999999999
+
+Month: 2
+Monday: 18.949599999999997
+Tuesday: 26.7472
+Wednesday: 18.3568
+Thursday: 17.3872
+Friday: 21.92
+Saturday: 1.3072
+Sunday: 1.2668
+All Ridership in Month: 105.9348
+
+Month: 3
+Monday: 23.630399999999998
+Tuesday: 29.856800000000003
+Wednesday: 22.592
+Thursday: 16.48
+Friday: 19.3632
+Saturday: 0.0
+Sunday: 1.418
+All Ridership in Month: 113.34040000000002
+
+Month: 4
+Monday: 18.0432
+Tuesday: 24.504
+Wednesday: 17.1472
+Thursday: 13.7816
+Friday: 11.9304
+Saturday: 2.1056
+Sunday: 0.0
+All Ridership in Month: 87.512
+
+Month: 5
+Monday: 14.572799999999999
+Tuesday: 17.697599999999998
+Wednesday: 20.6832
+Thursday: 14.572
+Friday: 13.412
+Saturday: 0.0
+Sunday: 2.2855999999999996
+All Ridership in Month: 83.2232
+
+Month: 6
+Monday: 10.8072
+Tuesday: 15.7524
+Wednesday: 12.8768
+Thursday: 11.6816
+Friday: 9.9496
+Saturday: 5.162
+Sunday: 2.6272
+All Ridership in Month: 68.8568
+
+Month: 7
+Monday: 7.661600000000001
+Tuesday: 11.53
+Wednesday: 14.8172
+Thursday: 13.5256
+Friday: 5.9264
+Saturday: 5.178400000000001
+Sunday: 5.348800000000001
+All Ridership in Month: 63.988000000000014
+
+Month: 8
+Monday: 12.763199999999998
+Tuesday: 14.095199999999998
+Wednesday: 14.0592
+Thursday: 19.8304
+Friday: 13.613599999999998
+Saturday: 3.9632
+Sunday: 2.6479999999999997
+All Ridership in Month: 80.97279999999998
+
+Month: 9
+Monday: 12.9512
+Tuesday: 19.245599999999996
+Wednesday: 23.1408
+Thursday: 27.5032
+Friday: 12.043199999999999
+Saturday: 4.0608
+Sunday: 0.0
+All Ridership in Month: 98.9448
+
+Month: 10
+Monday: 20.6616
+Tuesday: 18.2308
+Wednesday: 22.1128
+Thursday: 20.528399999999998
+Friday: 15.5992
+Saturday: 6.396000000000001
+Sunday: 0.0
+All Ridership in Month: 103.52879999999999
+
+Month: 11
+Monday: 43.129599999999996
+Tuesday: 27.595999999999997
+Wednesday: 22.3176
+Thursday: 23.0312
+Friday: 12.1396
+Saturday: 6.628
+Sunday: 0.0
+All Ridership in Month: 134.84199999999998
+
+Month: 12
+Monday: 22.966
+Tuesday: 9.732800000000001
+Wednesday: 11.1832
+Thursday: 17.4936
+Friday: 14.740000000000002
+Saturday: 1.0264
+Sunday: 0.0
+All Ridership in Month: 77.142
+
+All Ridership in Year: 1083.7344
+
+Year: 2023
+Month: 1
+Monday: 16.502399999999998
+Tuesday: 13.803199999999999
+Wednesday: 12.2408
+Thursday: 17.0232
+Friday: 15.968800000000002
+Saturday: 6.820399999999999
+Sunday: 0.0
+All Ridership in Month: 82.3588
+
+Month: 2
+Monday: 21.4844
+Tuesday: 31.3696
+Wednesday: 26.854799999999997
+Thursday: 30.4144
+Friday: 35.794000000000004
+Saturday: 1.33
+Sunday: 0.0
+All Ridership in Month: 147.24720000000002
+
+Month: 3
+Monday: 40.4276
+Tuesday: 32.3744
+Wednesday: 27.154399999999995
+Thursday: 36.611200000000004
+Friday: 30.265600000000003
+Saturday: 3.8888
+Sunday: 0.0
+All Ridership in Month: 170.722
+
+Month: 4
+Monday: 29.0528
+Tuesday: 21.486800000000002
+Wednesday: 18.6832
+Thursday: 21.0376
+Friday: 20.6864
+Saturday: 3.1184
+Sunday: 2.0368000000000004
+All Ridership in Month: 116.10199999999999
+
+Month: 5
+Monday: 28.087999999999997
+Tuesday: 20.726399999999998
+Wednesday: 13.9296
+Thursday: 23.7424
+Friday: 14.705999999999998
+Saturday: 1.366
+Sunday: 1.2712
+All Ridership in Month: 103.82959999999999
+
+Month: 6
+Monday: 11.89
+Tuesday: 12.2324
+Wednesday: 17.114
+Thursday: 11.6472
+Friday: 6.9319999999999995
+Saturday: 3.7988
+Sunday: 2.4516
+All Ridership in Month: 66.066
+
+Month: 7
+Monday: 11.1528
+Tuesday: 9.148
+Wednesday: 14.122799999999998
+Thursday: 5.004
+Friday: 15.206000000000001
+Saturday: 1.2432
+Sunday: 0.0
+All Ridership in Month: 55.876799999999996
+
+Month: 8
+Monday: 25.9136
+Tuesday: 20.0464
+Wednesday: 17.435200000000002
+Thursday: 19.5192
+Friday: 15.052
+Saturday: 1.3308
+Sunday: 1.3308
+All Ridership in Month: 100.62799999999999
+
+Month: 9
+Monday: 22.807599999999997
+Tuesday: 65.3848
+Wednesday: 29.518
+Thursday: 53.495999999999995
+Friday: 35.9904
+Saturday: 2.9904
+Sunday: 3.7128
+All Ridership in Month: 213.89999999999995
+
+Month: 10
+Monday: 25.4264
+Tuesday: 44.3504
+Wednesday: 31.4636
+Thursday: 41.989999999999995
+Friday: 35.4708
+Saturday: 3.9776
+Sunday: 2.1216
+All Ridership in Month: 184.8004
+
+Month: 11
+Monday: 29.518399999999996
+Tuesday: 47.40520000000001
+Wednesday: 22.1312
+Thursday: 24.6232
+Friday: 29.1872
+Saturday: 2.564
+Sunday: 1.23
+All Ridership in Month: 156.65919999999997
+
+Month: 12
+Monday: 20.6648
+Tuesday: 18.8024
+Wednesday: 17.6592
+Thursday: 18.4388
+Friday: 18.6376
+Saturday: 4.2112
+Sunday: 0.0
+All Ridership in Month: 98.414
+
+All Ridership in Year: 1496.604
+
+Year: 2024
+Month: 1
+Monday: 9.9008
+Tuesday: 19.276
+Wednesday: 20.439999999999998
+Thursday: 16.259999999999998
+Friday: 16.0708
+Saturday: 2.6932
+Sunday: 1.3552
+All Ridership in Month: 85.996
+
+Month: 2
+Monday: 32.830000000000005
+Tuesday: 31.044800000000002
+Wednesday: 41.4292
+Thursday: 40.864
+Friday: 45.3976
+Saturday: 1.3
+Sunday: 2.7108
+All Ridership in Month: 195.57640000000004
+
+Month: 3
+Monday: 48.93320000000001
+Tuesday: 36.4632
+Wednesday: 28.2136
+Thursday: 35.068799999999996
+Friday: 38.935199999999995
+Saturday: 5.22
+Sunday: 3.0408
+All Ridership in Month: 195.87479999999996
+
+Month: 4
+Monday: 34.4264
+Tuesday: 25.9224
+Wednesday: 31.616799999999998
+Thursday: 31.125600000000002
+Friday: 35.592
+Saturday: 1.3208
+Sunday: 3.8964
+All Ridership in Month: 163.9004
+
+Month: 5
+Monday: 34.358
+Tuesday: 35.1268
+Wednesday: 30.4544
+Thursday: 29.956
+Friday: 28.772800000000004
+Saturday: 1.2432
+Sunday: 2.624
+All Ridership in Month: 162.5352
+
+Month: 6
+Monday: 23.6276
+Tuesday: 36.364000000000004
+Wednesday: 31.285600000000002
+Thursday: 20.096
+Friday: 17.6768
+Saturday: 0.0
+Sunday: 4.280799999999999
+All Ridership in Month: 133.3308
+
+Month: 7
+Monday: 25.276000000000003
+Tuesday: 30.372
+Wednesday: 29.161600000000004
+Thursday: 22.28
+Friday: 13.2176
+Saturday: 0.0
+Sunday: 1.3092
+All Ridership in Month: 121.61640000000001
+
+Month: 8
+Monday: 15.5452
+Tuesday: 19.288
+Wednesday: 29.168000000000003
+Thursday: 25.836800000000004
+Friday: 20.0256
+Saturday: 3.06
+Sunday: 0.0
+All Ridership in Month: 112.9236
+
+Month: 9
+Monday: 39.93679999999999
+Tuesday: 46.574
+Wednesday: 45.6356
+Thursday: 56.362
+Friday: 57.496
+Saturday: 5.26
+Sunday: 1.0072
+All Ridership in Month: 252.27159999999998
+
+Month: 10
+Monday: 41.231199999999994
+Tuesday: 43.6024
+Wednesday: 33.800799999999995
+Thursday: 41.9568
+Friday: 31.851999999999997
+Saturday: 5.17
+Sunday: 0.0
+All Ridership in Month: 197.61319999999998
+
+Month: 11
+Monday: 51.0888
+Tuesday: 43.958000000000006
+Wednesday: 28.348000000000003
+Thursday: 39.80799999999999
+Friday: 24.048000000000002
+Saturday: 4.9784
+Sunday: 2.556
+All Ridership in Month: 194.7852
+
+Month: 12
+Monday: 37.291199999999996
+Tuesday: 19.179199999999998
+Wednesday: 22.8376
+Thursday: 26.4568
+Friday: 20.6692
+Saturday: 8.9572
+Sunday: 1.0296
+All Ridership in Month: 136.42079999999999
+
+All Ridership in Year: 1952.8444000000004
+
+All Ridership in Four Years: 5666.937600000001
