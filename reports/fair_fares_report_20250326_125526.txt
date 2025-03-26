@@ -1,0 +1,98 @@
+=== FAIR FARES AWARENESS REPORT ===
+
+Report generated on: 2025-03-26 12:55:26
+Dataset: CunyMetroCard191.xlsx
+Number of respondents: 191
+Number of questions: 33
+
+=== COLUMNS IN THE DATASET ===
+
+1. ID
+2. Start time
+3. Completion time
+4. Email
+5. Name
+6. Last modified time
+7. EMPL ID (CUNY)
+8. Email Address
+9. How many MetroCard swipes (excluding transfers) do you use on a typical day?
+10. How many of those swipes are used for commuting to and from college?
+11. What time do you typically leave college on a regular day? (Write in this format: - 2:00 PM / 2:00 AM)
+12. Do you have a job?
+13. If yes, how many swipes are used for commuting to work?
+14. On a scale of 1-10, how much financial stress does transportation cause you? (Linear scale: 1 = No stress, 10 = Extreme stress)
+15. On a scale of 1-10, how reliable do you find the MTA? (Linear scale: 1 = Very unreliable, 10 = Very reliable)
+16. Do you regularly take the train to travel to or from Hunter? (Yes/No)
+
+17. What is your starting station for your trip to Hunter? (None if you don't use the train)
+
+18. How often do you notice an NYPD presence at the stations near your starting station?
+19. Which station do you typically exit at to reach Hunter?
+
+20. How often do you notice an NYPD presence at the stations near Hunter?
+
+21. Does the presence of NYPD at the station make you feel uneasy or unsafe?
+
+22. Do you also use alternate transportation (bike, carpool, rideshare, etc.)?
+23. If yes, what services do you use?
+24. On average, how much time (in minutes) do you spend commuting to college?
+25. How often have you arrived late or been absent due to MTA delays this semester? 
+26. How much do transportation costs affect your participation in extracurricular activities?
+27. Do you ever skip school/extracurriculars due to transportation costs?
+28. Rank the following areas where you’d allocate the extra money:
+29. Are you aware of the Fair Fares Program?
+30. Have you ever applied for Fair Fares?
+31. If you applied, did you get accepted or rejected?
+32. If accepted, has Fair Fares reduced your financial stress?
+33. Would you apply for a reduced-fare MetroCard if it were available to more students?
+
+=== FAIR FARES AWARENESS ANALYSIS ===
+
+Column: Are you aware of the Fair Fares Program?
+
+Response counts:
+Yes: 110
+No: 81
+
+Response percentages:
+Yes: 57.59%
+No: 42.41%
+
+Pie chart saved as 'reports/fair_fares_awareness_Are_you_aware_of_the_Fair_Fares_Program?_20250326_125526.png'
+
+
+=== SUMMARY OF FAIR FARES AWARENESS ===
+
+Total respondents: 191
+Aware of Fair Fares: 110 (57.59%)
+Not aware of Fair Fares: 81 (42.41%)
+Column: Have you ever applied for Fair Fares?
+
+Response counts:
+No: 141
+Yes: 42
+No response: 8
+
+Response percentages:
+No: 73.82%
+Yes: 21.99%
+No response: 4.19%
+
+Pie chart saved as 'reports/fair_fares_awareness_Have_you_ever_applied_for_Fair_Fares?_20250326_125526.png'
+
+Column: If accepted, has Fair Fares reduced your financial stress?
+
+Response counts:
+No response: 141
+Yes: 24
+No: 17
+Maybe: 9
+
+Response percentages:
+No response: 73.82%
+Yes: 12.57%
+No: 8.90%
+Maybe: 4.71%
+
+Pie chart saved as 'reports/fair_fares_awareness_If_accepted,_has_Fair_Fares_reduced_your_financial_stress?_20250326_125526.png'
+

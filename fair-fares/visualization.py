@@ -265,7 +265,7 @@ class FairFaresVisualizer:
                         y=0.95 - (j * 0.035),  # Reduced spacing between items to fit better in the margin
                         xref="paper",
                         yref="paper",
-                        text=f"<b style='color: {'red' if j == i else 'black'};'>{nodes[j]['label']}:</b> {desc}",
+                        text=f"<b style='color: {'red' if j == i else 'black'};'>{nodes[j]['label']}:</b> {desc} ({sankey_data[nodes[j]['label'].lower().replace(' ', '_') + '_count']})",
                         showarrow=False,
                         font=dict(size=11, color="#333333" if j != i else "#FF0000"),  # Slightly smaller font
                         align="left",
@@ -301,109 +301,25 @@ class FairFaresVisualizer:
                         thickness=25,
                         line=dict(color="rgba(50, 50, 50, 0.5)", width=0.8),
                         label=[node['label'] for node in nodes],
-                        # Highlight current node with a unique color in animation sequence
-                        color=[highlight_colors[i % len(highlight_colors)] if j == i else 
-                               "rgba(31, 119, 180, 0.9)" if j == 0 else
-                               "rgba(255, 127, 14, 0.9)" if j == 1 else
-                               "rgba(44, 160, 44, 0.9)" if j == 2 else
-                               "rgba(214, 39, 40, 0.9)" if j == 3 else
-                               "rgba(148, 103, 189, 0.9)" if j == 4 else
-                               "rgba(140, 86, 75, 0.9)" if j == 5 else
-                               "rgba(227, 119, 194, 0.9)" if j == 6 else
-                               "rgba(127, 127, 127, 0.9)" if j == 7 else
-                               "rgba(188, 189, 34, 0.9)" if j == 8 else
-                               "rgba(23, 190, 207, 0.9)" if j == 9 else
-                               "rgba(31, 119, 180, 0.9)" if j == 10 else
-                               "rgba(255, 127, 14, 0.9)" if j == 11 else
-                               "rgba(44, 160, 44, 0.9)" if j == 12 else
-                               "rgba(214, 39, 40, 0.9)" for j in range(len(nodes))],
+                        color=[highlight_colors[j] if j == i else "rgba(31, 119, 180, 0.9)" for j in range(len(nodes))],
                         hoverinfo="all",
-                        hoverlabel=dict(
-                            bgcolor="white", 
-                            font_size=14, 
-                            font_family="Arial",
-                            bordercolor="rgba(0, 0, 0, 0.3)",
-                            namelength=-1
-                        )
+                        hoverlabel=dict(bgcolor="white", font_size=14, font_family="Arial")
                     ),
                     link=dict(
                         source=[link['source'] for link in links],
                         target=[link['target'] for link in links],
                         value=[link['value'] for link in links],
-                        label=[link.get('label', '') for link in links],
-                        # Highlight links connected to current node with the same color as the highlighted node
-                        color=[(highlight_colors[i % len(highlight_colors)].replace('0.9', '0.5')) if link['source'] == i or link['target'] == i else
-                               "rgba(0, 0, 0, 0.2)" for link in links],
-                        hoverinfo="all"
+                        label=[link['label'] for link in links],
+                        color=["rgba(31, 119, 180, 0.4)" for _ in links],
+                        hoverinfo="all",
+                        hoverlabel=dict(bgcolor="white", font_size=14, font_family="Arial")
                     )
                 )],
-                name=f"Frame {i}",
-                layout=dict(annotations=legend_annotations)
+                name=f"Highlight {nodes[i]['label']}"
             )
+            
             frames.append(frame_data)
         
-        # Create a reset frame that returns to the original colors
-        reset_frame = go.Frame(
-            data=[go.Sankey(
-                node=dict(
-                    pad=20,
-                    thickness=25,
-                    line=dict(color="rgba(50, 50, 50, 0.5)", width=0.8),
-                    label=[node['label'] for node in nodes],
-                    # Original colors without highlighting
-                    color=["rgba(31, 119, 180, 0.9)",  # Total Responses - deeper blue
-                           "rgba(255, 127, 14, 0.9)",  # Aware - vibrant orange
-                           "rgba(44, 160, 44, 0.9)",  # Unaware - rich green
-                           "rgba(214, 39, 40, 0.9)",  # No Awareness Response - bright red
-                           "rgba(148, 103, 189, 0.9)",  # Applied - deep purple
-                           "rgba(140, 86, 75, 0.9)",  # Did Not Apply - brown
-                           "rgba(227, 119, 194, 0.9)",  # No Application Response - pink
-                           "rgba(127, 127, 127, 0.9)",  # Accepted - gray
-                           "rgba(188, 189, 34, 0.9)",  # Rejected - yellow-green
-                           "rgba(23, 190, 207, 0.9)",  # Pending - cyan
-                           "rgba(31, 119, 180, 0.9)",  # No Acceptance Response - blue
-                           "rgba(255, 127, 14, 0.9)",  # Reduced Financial Burden - orange
-                           "rgba(44, 160, 44, 0.9)",  # No Reduction in Financial Burden - green
-                           "rgba(214, 39, 40, 0.9)"],  # No Financial Burden Response - red
-                    hoverinfo="all",
-                    hoverlabel=dict(
-                        bgcolor="white", 
-                        font_size=14, 
-                        font_family="Arial",
-                        bordercolor="rgba(0, 0, 0, 0.3)",
-                        namelength=-1
-                    )
-                ),
-                link=dict(
-                    source=[link['source'] for link in links],
-                    target=[link['target'] for link in links],
-                    value=[link['value'] for link in links],
-                    label=[link.get('label', '') for link in links],
-                    # Original link colors
-                    color=["rgba(31, 119, 180, 0.6)",  # Total to Aware
-                           "rgba(255, 127, 14, 0.6)",  # Total to Unaware
-                           "rgba(44, 160, 44, 0.6)",  # Total to No Awareness Response
-                           "rgba(214, 39, 40, 0.6)",  # Aware to Applied
-                           "rgba(148, 103, 189, 0.6)",  # Aware to Did Not Apply
-                           "rgba(140, 86, 75, 0.6)",  # Aware to No Application Response
-                           "rgba(227, 119, 194, 0.6)",  # Applied to Accepted
-                           "rgba(127, 127, 127, 0.6)",  # Applied to Rejected
-                           "rgba(188, 189, 34, 0.6)",  # Applied to Pending
-                           "rgba(23, 190, 207, 0.6)",  # Applied to No Acceptance Response
-                           "rgba(31, 119, 180, 0.6)",  # Accepted to Reduced
-                           "rgba(255, 127, 14, 0.6)",  # Accepted to Not Reduced
-                           "rgba(44, 160, 44, 0.6)"],  # Accepted to No Burden Response
-                    hoverinfo="all"
-                )
-            )],
-            name="Reset",
-            layout=dict(annotations=[])
-        )
-        
-        # Add the reset frame to the end of the frames list
-        frames.append(reset_frame)
-        
-        # Add frames to the figure
         fig.frames = frames
         
         # Update the layout with enhanced UI and animations
