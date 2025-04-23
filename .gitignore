@@ -1,3 +1,6 @@
 .vscode
 datasets
 __pycache__
+images
+temp_map.html
+*.gif
